@@ -1,6 +1,6 @@
 ![alt text]
 
-# DED an interfaced publish/subscribe framework for Delphi
+# DED an interfaced publish/subscribe and multicast framework for Delphi
 Delphi Event Dispatcher (for short DED) is a publish/subscribe and multicast Event framework for Cross platforms.
 
 
