@@ -58,9 +58,9 @@ end;
 type
   TForm1=class(TForm, IDataEvent)
     procedure OnDataReceived(Sender:IDataSender; const DataBuffer:Pointer; const DataBufferSize:Integer);
-    procdure OnOpen(Sender:IDataSender);
-	procedure OnClose(Sender:IDataSender);
-	...
+    procedure OnOpen(Sender:IDataSender);
+    procedure OnClose(Sender:IDataSender);
+    ...
   end;
 ...
 procedure TForm1.OnDataReceived(Sender:IDataSender; const DataBuffer:Pointer; const DataBufferSize:Integer);
