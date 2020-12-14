@@ -1,6 +1,6 @@
 ![alt text]
 
-# DED an interfaced publish/subscribe framework for Delphi
+# DED an interfaced publish/subscribe and multicast framework for Delphi
 Delphi Event Dispatcher (for short DED) is a publish/subscribe and multicast Event framework for Cross platforms.
 
 
@@ -8,7 +8,7 @@ Delphi Event Dispatcher (for short DED) is a publish/subscribe and multicast Eve
 * __Easy :__ DelphiEventDispatch is easy to learn and use. it can override an interface of Events to be a subscribers, and publisher only call procedures of an virtual Event interface to invoke all subscribers.
 * __Decouple : based interface, decouple different parts/layers of your application.
 * __Event Driven__
-* __Support different delivery mode:__ Specifying the TThreadMode in Subscribe attribute, you can choose to delivery the event in the Main Thread or in a Background ones.
+* __Support different delivery mode:__ Specifying the CallInUIThread in Dispatcher constructor, you can choose to delivery the event in the Main Thread or in a Background ones.
 * __Thread Safe__
 
 ## Show me the code
@@ -58,9 +58,9 @@ end;
 type
   TForm1=class(TForm, IDataEvent)
     procedure OnDataReceived(Sender:IDataSender; const DataBuffer:Pointer; const DataBufferSize:Integer);
-    procdure OnOpen(Sender:IDataSender);
-	procedure OnClose(Sender:IDataSender);
-	...
+    procedure OnOpen(Sender:IDataSender);
+    procedure OnClose(Sender:IDataSender);
+    ...
   end;
 ...
 procedure TForm1.OnDataReceived(Sender:IDataSender; const DataBuffer:Pointer; const DataBufferSize:Integer);
