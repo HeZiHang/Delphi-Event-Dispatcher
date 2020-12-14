@@ -1,0 +1,29 @@
+object FormChild: TFormChild
+  Left = 0
+  Top = 0
+  Caption = 'FormChild'
+  ClientHeight = 307
+  ClientWidth = 641
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 0
+    Top = 0
+    Width = 641
+    Height = 307
+    Align = alClient
+    Alignment = taCenter
+    Caption = 'Label1'
+    ExplicitLeft = 312
+    ExplicitTop = 160
+    ExplicitWidth = 31
+    ExplicitHeight = 13
+  end
+end

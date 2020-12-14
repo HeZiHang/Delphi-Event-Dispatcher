@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{438F1417-C05D-4768-AFAF-A93B0DF1870F}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="BatchControl\pBatchControl.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Port\pPort.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="pBatchControl">
+        <MSBuild Projects="BatchControl\pBatchControl.dproj"/>
+    </Target>
+    <Target Name="pBatchControl:Clean">
+        <MSBuild Projects="BatchControl\pBatchControl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="pBatchControl:Make">
+        <MSBuild Projects="BatchControl\pBatchControl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="pPort">
+        <MSBuild Projects="Port\pPort.dproj"/>
+    </Target>
+    <Target Name="pPort:Clean">
+        <MSBuild Projects="Port\pPort.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="pPort:Make">
+        <MSBuild Projects="Port\pPort.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="pBatchControl;pPort"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="pBatchControl:Clean;pPort:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="pBatchControl:Make;pPort:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
