@@ -8,7 +8,7 @@ Delphi Event Dispatcher (for short DED) is a publish/subscribe and multicast Eve
 * __Easy :__ DelphiEventDispatch is easy to learn and use. it can override an interface of Events to be a subscribers, and publisher only call procedures of an virtual Event interface to invoke all subscribers.
 * __Decouple : based interface, decouple different parts/layers of your application.
 * __Event Driven__
-* __Support different delivery mode:__ Specifying the CallInUIThread in Dispatcher constructor, you can choose to delivery the event in the Main Thread or in a Background ones.
+* __Support different delivery mode:__ Specifying the CallInUIThread in Dispatcher constructor, you can choose to delivery the event in the Main Thread or in Caller Thread.
 * __Thread Safe__
 
 ## Show me the code
