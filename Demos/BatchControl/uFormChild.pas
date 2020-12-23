@@ -15,7 +15,7 @@ type
     procedure Show;
     procedure SetLabel(const Value: String);
   end;
-
+  {$M-}
 
   TFormChild = class(TForm, IFormEvents)
     Label1: TLabel;
